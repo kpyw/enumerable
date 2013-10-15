@@ -21,7 +21,7 @@ load 'seeds.rb'
 #MY SOLUTION
 
 # STUDENTS.each do |search|
-# # if search.collect  { |vince| vince["last_name"] == "Cabansag" }
+
 # if search["last_name"] == "Cabansag"
 #   puts "name: #{search["first_name"]} #{search['last_name']}
 #   twitter: @#{search['twitter']}
@@ -52,19 +52,44 @@ load 'seeds.rb'
 # Update your script so that you only show values of a person if they're present
 # We don't want to see "blog: " or "github: "
 
-twitter_handles = STUDENTS.collect { |student| "#{student["twitter"]}" }
+# MY SOLUTION
 
-# new_twitter_handles=[ ]
-# new_twitter_handles = twitter_handles.compact
-# puts new_twitter_handles.class
-new_twitter_handles.each do |handle|
-  if handle != " " puts "twitter: @#{handle}"
-  end
-end
+# STUDENTS.each do |student|
+#   # if student != nil
+#     puts "--" * 25
+#     puts "name: #{student["first_name"]} #{student['last_name']}"
+#     if student["twitter"]
+#        puts "twitter: @#{student['twitter']}"
+#     if student["github"]
+#       puts "github: #{student['github']}"
+#     if student['blog']
+#       puts "blog: http://#{student['blog']}"
+#     if student['email']
+#       puts "email: #{student['email']}"
+#        puts "--" * 25
+#     end
+#     end
+#     end
+#     end
+# end
+
+
 # CHALLENGE 4
 
 # Refactor your code to use the .keys method to access the key value pairs
 # We don't need to explicity type every key. Play around with the .keys method.
+
+
+STUDENTS.each do |student|
+    puts "--" * 25
+
+  student.keys.each do |key|
+      if student[key]
+      puts key +":" + student[key]
+      end
+  end
+end
+
 
 
 
