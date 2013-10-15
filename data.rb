@@ -54,12 +54,13 @@ load 'seeds.rb'
 
 twitter_handles = STUDENTS.collect { |student| "#{student["twitter"]}" }
 
-new_twitter_handles=[ ]
-new_twitter_handles = twitter_handles.compact
+# new_twitter_handles=[ ]
+# new_twitter_handles = twitter_handles.compact
 # puts new_twitter_handles.class
-new_twitter_handles.each { |handle| puts "twitter: @#{handle}"}
-
-
+new_twitter_handles.each do |handle|
+  if handle != " " puts "twitter: @#{handle}"
+  end
+end
 # CHALLENGE 4
 
 # Refactor your code to use the .keys method to access the key value pairs
