@@ -22,6 +22,14 @@ load 'seeds.rb'
 
 # STUDENTS.each do |search|
 
+# You found me! Consider making a method for finding a student by first name or last name.
+# e.g.
+
+#   def find_student_by_first_name(first_name)
+#
+#   end
+
+
 # if search["last_name"] == "Cabansag"
 #   puts "name: #{search["first_name"]} #{search['last_name']}
 #   twitter: @#{search['twitter']}
@@ -82,6 +90,8 @@ load 'seeds.rb'
 
 STUDENTS.each do |student|
     puts "--" * 25
+    
+# You figured it out! Using the keys method gives you access to the key without having to explicity call the key.
 
   student.keys.each do |key|
       if student[key]
